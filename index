@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Just Beat It!</title>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    </head>
+    <style>
+        .btn{
+            background-color: aliceblue;
+            position: absolute;
+            padding:10px;
+            font-size: large;
+            border-radius: 10px;
+        }
+    </style>
+    <body margin="center">
+        <img src="images/Boxing.jpg"><br>
+        <input type="button" onclick="info()" id="inf"class="btn">
+        </input>
+    </body>
+    <script>
+        var info_show = false;
+        var Inf = "=========Informations=========\nTime: 9:30~11:00, Saturday\nPlace: Gym building, 3F\nEmail us at funbox1st@hotmail.com!\n===========================";
+        document.getElementById("inf").value = Inf.substr(9,12);
+        function info(){
+            info_show = info_show ? false : true;
+            if(info_show == false){
+                document.getElementById("inf").value = Inf.substr(9,12);
+            }else{
+                document.getElementById("inf").value = Inf;
+            }
+        }
+    </script>
+</html>
